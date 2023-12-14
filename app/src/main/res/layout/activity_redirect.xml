@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RedirectActivity">
+
+    <TextView
+        android:id="@+id/reference"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="64dp"
+        android:text="Reference"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Reference" />
+
+    <TextView
+        android:id="@+id/result_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ResultCode"
+        app:layout_constraintEnd_toEndOf="@+id/reference"
+        app:layout_constraintStart_toStartOf="@+id/reference"
+        app:layout_constraintTop_toBottomOf="@+id/reference" />
+
+    <TextView
+        android:id="@+id/paymentRequestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="PaymentRequestId"
+        app:layout_constraintEnd_toEndOf="@+id/result_code"
+        app:layout_constraintStart_toStartOf="@+id/result_code"
+        app:layout_constraintTop_toBottomOf="@+id/result_code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
