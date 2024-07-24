@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         val amountFormatted = AmountWithCurrency.formatDecimal(BigDecimal((((1..99999).random()) / 100.00).toString()))
         binding.amount.setText(amountFormatted)
         binding.currency.setText("EUR")
-        binding.reference.setText("Reference " + ((1..999999).random()).toString())
+        binding.reference.setText("Reference ${((1..999999).random())}")
     }
 
     private fun toggleUiComponents() {
@@ -99,9 +99,9 @@ class MainActivity : AppCompatActivity() {
                 localization = "SK",
                 country = "SK"
             ), CallbackUrls(
-                "${DemoPaymentData.BaseRedirectUrl}?q=success",
-                "${DemoPaymentData.BaseRedirectUrl}?q=cancel",
-                "${DemoPaymentData.BaseRedirectUrl}?q=error"
+                "${DemoPaymentData.BaseRedirectUrl}&q=success",
+                "${DemoPaymentData.BaseRedirectUrl}&q=cancel",
+                "${DemoPaymentData.BaseRedirectUrl}&q=error"
             )
         )
 
